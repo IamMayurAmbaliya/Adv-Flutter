@@ -1,13 +1,8 @@
 import 'package:counter_app/headers.dart';
 
-class DemoPage extends StatefulWidget {
+class DemoPage extends StatelessWidget {
   const DemoPage({super.key});
 
-  @override
-  State<DemoPage> createState() => _DemoPageState();
-}
-
-class _DemoPageState extends State<DemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

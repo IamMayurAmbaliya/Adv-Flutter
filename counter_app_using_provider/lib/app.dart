@@ -1,6 +1,4 @@
-import 'package:counter_app/headers.dart';
-import 'package:counter_app/modal/counter_modal.dart';
-import 'package:provider/provider.dart';
+import 'package:counter_app_using_provider/headers.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

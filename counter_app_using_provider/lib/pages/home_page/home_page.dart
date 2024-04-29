@@ -1,18 +1,12 @@
-import 'package:counter_app/headers.dart';
-import 'package:counter_app/modal/counter_modal.dart';
-import 'package:provider/provider.dart';
+import 'package:counter_app_using_provider/headers.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFfefcff),
       appBar: AppBar(
         title: const Text(
           "HomePage",
