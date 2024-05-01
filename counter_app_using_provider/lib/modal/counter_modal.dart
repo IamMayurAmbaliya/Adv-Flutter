@@ -1,16 +1,18 @@
 import 'package:counter_app_using_provider/headers.dart';
 
-class CounterModal extends ChangeNotifier {
+class CounterModal {
   int _counter = 0;
   int get getCounter => _counter;
 
+  CounterModal({required int initialValue}) {
+    _counter = initialValue;
+  }
+
   void increment() {
     _counter++;
-    notifyListeners();
   }
 
   void decrement() {
     _counter--;
-    notifyListeners();
   }
 }

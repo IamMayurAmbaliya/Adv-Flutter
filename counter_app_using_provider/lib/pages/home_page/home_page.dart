@@ -37,16 +37,16 @@ class HomePage extends StatelessWidget {
                 height: 10,
               ),
               Consumer<CounterModal>(
-                builder: (context, CounterModal, child) {
+                builder: (context, provider, child) {
                   return Text(
-                    "${CounterModal.getCounter}",
+                    "${provider.getCounter}",
                     style: const TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
                     ),
                   );
                 },
-              )
+              ),
             ],
           ),
         ),

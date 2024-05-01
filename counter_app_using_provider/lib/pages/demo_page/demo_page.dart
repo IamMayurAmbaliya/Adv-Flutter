@@ -7,7 +7,7 @@ class DemoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Navigation Demo"),
+        title: const Text("Navigation Demo"),
       ),
       body: Center(
         child: Container(
@@ -16,9 +16,9 @@ class DemoPage extends StatelessWidget {
             color: Colors.grey,
             child: Center(
               child: Consumer<CounterModal>(
-                builder: (context, CounterModal, child) {
+                builder: (context, provider, child) {
                   return Text(
-                    "${CounterModal.getCounter}",
+                    "${provider.getCounter}",
                     style: const TextStyle(
                       fontSize: 35,
                       fontWeight: FontWeight.bold,
