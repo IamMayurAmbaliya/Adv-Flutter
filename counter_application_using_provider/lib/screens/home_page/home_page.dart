@@ -35,15 +35,17 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              Consumer<CounterController>(
-                builder: (context, provider, child) => Text(
-                  "${provider.counterModal.getCounter}",
-                  style: const TextStyle(
-                    fontSize: 35,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              )
+              Text(
+                  "${Provider.of<CounterController>(context).counterModal.getCounter}"),
+              // Consumer<CounterController>(
+              //   builder: (context, provider, child) => Text(
+              //     "${provider.counterModal.getCounter}",
+              //     style: const TextStyle(
+              //       fontSize: 35,
+              //       fontWeight: FontWeight.bold,
+              //     ),
+              //   ),
+              // )
             ],
           ),
         ),
