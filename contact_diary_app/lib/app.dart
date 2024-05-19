@@ -7,9 +7,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(
-        seedColor: Colors.blueGrey,
-      )),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.deepPurple,
+        ),
+      ),
       debugShowCheckedModeBanner: false,
       routes: AppRoutes.instance.routes,
     );

@@ -11,3 +11,6 @@ export 'package:shared_preferences/shared_preferences.dart';
 
 export 'package:contact_diary_app/controllers/contact_controller.dart';
 export 'package:contact_diary_app/controllers/stepper_controller.dart';
+
+export 'package:contact_diary_app/lib/modals/text_input_field_modal.dart';
+export 'package:flutter/services.dart';

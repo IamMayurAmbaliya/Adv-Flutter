@@ -3,6 +3,7 @@ class Contact {
   String contact;
   String email;
   String image;
+  bool hidden = false;
 
   Contact(
     this.name,

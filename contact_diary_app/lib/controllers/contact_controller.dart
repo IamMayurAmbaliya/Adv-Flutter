@@ -2,6 +2,14 @@ import 'package:contact_diary_app/headers.dart';
 
 class ContactController extends ChangeNotifier {
   List<Contact> allContacts = <Contact>[];
+  List<Contact> allHiddenContacts = <Contact>[];
+
+  void hideContact({required int index}) {
+    allContacts[index].hidden = true;
+    allHiddenContacts.add(allContacts[index]);
+    allContacts.removeAt(index);
+    notifyListeners();
+  }
 
   void addContact({required Contact contact}) {
     allContacts.add(contact);

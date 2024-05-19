@@ -3,6 +3,11 @@ import 'package:contact_diary_app/headers.dart';
 class StepperController extends ChangeNotifier {
   int currentStep = 0;
 
+  void reset() {
+    currentStep = 0;
+    notifyListeners();
+  }
+
   void nextStep() {
     if (currentStep < 3) {
       currentStep++;
@@ -11,21 +16,23 @@ class StepperController extends ChangeNotifier {
   }
 
   void previousStep() {
-    if (currentStep < 3) {
-      currentStep++;
+    if (currentStep > 0) {
+      currentStep--;
     }
     notifyListeners();
   }
 
   bool isActive({required int index}) {
     return currentStep == index;
+    notifyListeners();
   }
 
-  StepState getStateStep({required int index}) {
+  StepState getStepState({required int index}) {
     return (currentStep == index)
         ? StepState.editing
         : (currentStep > index)
             ? StepState.complete
             : StepState.indexed;
+    notifyListeners();
   }
 }
