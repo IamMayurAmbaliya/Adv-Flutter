@@ -18,6 +18,7 @@ import 'package:api_calling_using_helpers/modal/cocktail_modal.dart';
 import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
+import 'package:api_calling_using_helpers/modal/dog_modal.dart';
 import 'package:api_calling_using_helpers/modal/event_modal.dart';
 import 'package:api_calling_using_helpers/modal/game_mode_modal.dart';
 import 'package:api_calling_using_helpers/modal/levelborder_modal.dart';
@@ -660,5 +661,53 @@ class ApiHelper {
       AllCocktail = data.map((e) => Cocktail.fromJson(e)).toList();
     }
     return AllCocktail;
+  }
+
+//========================================//
+
+// //Dictionary-Api
+//
+//   String dictionaryApi =
+//       "https://api.api-ninjas.com/v1/dictionary?word=${Globals.globals.searchDictionaryWord}";
+//   Future<List<Cocktail>> getAllDictionaryWord() async {
+//     List<Cocktail> AllDictionaryWord = [];
+//     String dictionaryApi =
+//         "https://api.api-ninjas.com/v1/dictionary?word=${Globals.globals.searchDictionaryWord}";
+//     http.Response response = await http.get(
+//       Uri.parse(dictionaryApi),
+//       headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+//     );
+//
+//     if (response.statusCode == 200) {
+//       log(Globals.globals.searchCocktailName);
+//
+//       List data = jsonDecode(response.body);
+//       AllDictionaryWord = data.map((e) => Cocktail.fromJson(e)).toList();
+//     }
+//     return AllDictionaryWord;
+//   }
+
+//========================================//
+
+//dog-Api
+
+  String dogApi =
+      "https://api.api-ninjas.com/v1/dogs?name=${Globals.globals.searchDogName}";
+  Future<List<Dog>> getAllDog() async {
+    List<Dog> allDog = [];
+    String dogApi =
+        "https://api.api-ninjas.com/v1/dogs?name=${Globals.globals.searchDogName}";
+    http.Response response = await http.get(
+      Uri.parse(dogApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchDogName);
+
+      List data = jsonDecode(response.body);
+      allDog = data.map((e) => Dog.fromJson(e)).toList();
+    }
+    return allDog;
   }
 }

@@ -14,6 +14,8 @@ import 'package:api_calling_using_helpers/pages/city_page/city_page.dart';
 import 'package:api_calling_using_helpers/pages/cocktail_page/cocktail_page.dart';
 import 'package:api_calling_using_helpers/pages/content_page/content_page.dart';
 import 'package:api_calling_using_helpers/pages/country_page/country_page.dart';
+import 'package:api_calling_using_helpers/pages/dictionary_page/dictionary_page.dart';
+import 'package:api_calling_using_helpers/pages/dog_page/dog_page.dart';
 import 'package:api_calling_using_helpers/pages/event_page/event_page.dart';
 import 'package:api_calling_using_helpers/pages/game_mode_page/game_mode_page.dart';
 import 'package:api_calling_using_helpers/pages/currencies_page/currencies_page.dart';
@@ -67,6 +69,8 @@ class AppRoutes {
   String celebrityPage = "celebrity_page";
   String cityPage = "city_page";
   String cocktailPage = "cocktail_page";
+  String dictionaryPage = "dictionary_page";
+  String dogPage = "dog_page";
 
   Map<String, WidgetBuilder> routes = {
     "/": (context) => const HomePage(),
@@ -101,5 +105,7 @@ class AppRoutes {
     "celebrity_page": (context) => const CelebrityPage(),
     "city_page": (context) => const CityPage(),
     "cocktail_page": (context) => const CockTailPage(),
+    "dictionary_page": (context) => const DictionaryPage(),
+    "dog_page": (context) => const DogPage(),
   };
 }

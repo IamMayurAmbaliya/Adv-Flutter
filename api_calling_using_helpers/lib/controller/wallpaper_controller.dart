@@ -17,6 +17,7 @@ import 'package:api_calling_using_helpers/modal/cocktail_modal.dart';
 import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
+import 'package:api_calling_using_helpers/modal/dog_modal.dart';
 import 'package:api_calling_using_helpers/modal/event_modal.dart';
 import 'package:api_calling_using_helpers/modal/game_mode_modal.dart';
 import 'package:api_calling_using_helpers/modal/levelborder_modal.dart';
@@ -74,6 +75,7 @@ class WallPaperController extends ChangeNotifier {
   List<Celebrity> allCelebrities = [];
   List<City> allCities = [];
   List<Cocktail> allCocktails = [];
+  List<Dog> allDogs = [];
 
   WallPaperController() {
     getData();
@@ -142,6 +144,8 @@ class WallPaperController extends ChangeNotifier {
     allCities = await ApiHelper.apiHelper.getAllCity();
 
     allCocktails = await ApiHelper.apiHelper.getAllCocktail();
+
+    allDogs = await ApiHelper.apiHelper.getAllDog();
 
     notifyListeners();
   }

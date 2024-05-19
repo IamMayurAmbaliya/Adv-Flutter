@@ -311,6 +311,16 @@ class HomePage extends StatelessWidget {
                   "29.CocktailApi",
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.dogPage,
+                  );
+                },
+                child: const Text(
+                  "30.DogApi",
+                ),
+              ),
             ],
           ),
         ),
