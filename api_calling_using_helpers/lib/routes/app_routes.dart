@@ -16,10 +16,17 @@ import 'package:api_calling_using_helpers/pages/content_page/content_page.dart';
 import 'package:api_calling_using_helpers/pages/country_page/country_page.dart';
 import 'package:api_calling_using_helpers/pages/dictionary_page/dictionary_page.dart';
 import 'package:api_calling_using_helpers/pages/dog_page/dog_page.dart';
+import 'package:api_calling_using_helpers/pages/emoji_page/emoji_page.dart';
 import 'package:api_calling_using_helpers/pages/event_page/event_page.dart';
+import 'package:api_calling_using_helpers/pages/exercise_page/exercise_page.dart';
 import 'package:api_calling_using_helpers/pages/game_mode_page/game_mode_page.dart';
 import 'package:api_calling_using_helpers/pages/currencies_page/currencies_page.dart';
+import 'package:api_calling_using_helpers/pages/helicopter_page/helicopter_page.dart';
+import 'package:api_calling_using_helpers/pages/historical_event_page/historical_event_page.dart';
+import 'package:api_calling_using_helpers/pages/historical_man_page/historical_man_page.dart';
+import 'package:api_calling_using_helpers/pages/holiday_page/holiday_page.dart';
 import 'package:api_calling_using_helpers/pages/home_page/home_page.dart';
+import 'package:api_calling_using_helpers/pages/interest_rate_page/interest_rate_page.dart';
 import 'package:api_calling_using_helpers/pages/level_border_page/level_border_page.dart';
 import 'package:api_calling_using_helpers/pages/map_page/map_page.dart';
 import 'package:api_calling_using_helpers/pages/nature_page/nature_page.dart';
@@ -71,6 +78,13 @@ class AppRoutes {
   String cocktailPage = "cocktail_page";
   String dictionaryPage = "dictionary_page";
   String dogPage = "dog_page";
+  String emojiPage = "emoji_page";
+  String exercisePage = "exercise_page";
+  String helicopterPage = "helicopter_page";
+  String historicalEventPage = "historical_event_page";
+  String historicalManPage = "historical_man_page";
+  String holidayPage = "holiday_page";
+  String interestRatePage = "interest_rate_page";
 
   Map<String, WidgetBuilder> routes = {
     "/": (context) => const HomePage(),
@@ -107,5 +121,12 @@ class AppRoutes {
     "cocktail_page": (context) => const CockTailPage(),
     "dictionary_page": (context) => const DictionaryPage(),
     "dog_page": (context) => const DogPage(),
+    "emoji_page": (context) => const EmojiPage(),
+    "exercise_page": (context) => const ExercisePage(),
+    "helicopter_page": (context) => const HelicopterPage(),
+    "historical_event_page": (context) => const HistoricalEventPage(),
+    "historical_man_page": (context) => const HistoricalManPage(),
+    "holiday_page": (context) => const HoliDayPage(),
+    "interest_rate_page": (context) => const InterestRatePage(),
   };
 }

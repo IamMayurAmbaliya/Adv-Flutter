@@ -19,8 +19,15 @@ import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
 import 'package:api_calling_using_helpers/modal/dog_modal.dart';
+import 'package:api_calling_using_helpers/modal/emoji_modal.dart';
 import 'package:api_calling_using_helpers/modal/event_modal.dart';
+import 'package:api_calling_using_helpers/modal/exercise_modal.dart';
 import 'package:api_calling_using_helpers/modal/game_mode_modal.dart';
+import 'package:api_calling_using_helpers/modal/helicopter_modal.dart';
+import 'package:api_calling_using_helpers/modal/historical_event_modal.dart';
+import 'package:api_calling_using_helpers/modal/historical_man_modal.dart';
+import 'package:api_calling_using_helpers/modal/holiday_modal.dart';
+import 'package:api_calling_using_helpers/modal/interest_rate_modal.dart';
 import 'package:api_calling_using_helpers/modal/levelborder_modal.dart';
 import 'package:api_calling_using_helpers/modal/map_modal.dart';
 import 'package:api_calling_using_helpers/modal/nature_modal.dart';
@@ -709,5 +716,178 @@ class ApiHelper {
       allDog = data.map((e) => Dog.fromJson(e)).toList();
     }
     return allDog;
+  }
+
+//========================================//
+
+//Emoji-Api
+
+  String emojiApi =
+      "https://api.api-ninjas.com/v1/emoji?name=${Globals.globals.searchEmojiName}";
+  Future<List<Emoji>> getAllEmoji() async {
+    List<Emoji> allEmoji = [];
+    String emojiApi =
+        "https://api.api-ninjas.com/v1/emoji?name=${Globals.globals.searchEmojiName}";
+    http.Response response = await http.get(
+      Uri.parse(emojiApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchEmojiName);
+
+      List data = jsonDecode(response.body);
+      allEmoji = data.map((e) => Emoji.fromJson(e)).toList();
+    }
+    return allEmoji;
+  }
+
+//========================================//
+
+//Exercise-Api
+
+  String exerciseApi =
+      "https://api.api-ninjas.com/v1/exercises?muscle=${Globals.globals.searchExerciseName}";
+  Future<List<Exercise>> getAllExercise() async {
+    List<Exercise> allExercise = [];
+    String exerciseApi =
+        "https://api.api-ninjas.com/v1/exercises?muscle=${Globals.globals.searchExerciseName}";
+    http.Response response = await http.get(
+      Uri.parse(exerciseApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchExerciseName);
+
+      List data = jsonDecode(response.body);
+      allExercise = data.map((e) => Exercise.fromJson(e)).toList();
+    }
+    return allExercise;
+  }
+
+//========================================//
+
+//Helicopter-Api
+
+  String helicopterApi =
+      "https://api.api-ninjas.com/v1/helicopter?manufacturer=${Globals.globals.searchHelicopterManufacturerName}";
+  Future<List<Helicopter>> getAllHelicopterManufacturer() async {
+    List<Helicopter> allHelicopterManufacturer = [];
+    String helicopterApi =
+        "https://api.api-ninjas.com/v1/helicopter?manufacturer=${Globals.globals.searchHelicopterManufacturerName}";
+    http.Response response = await http.get(
+      Uri.parse(helicopterApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchHelicopterManufacturerName);
+
+      List data = jsonDecode(response.body);
+      allHelicopterManufacturer =
+          data.map((e) => Helicopter.fromJson(e)).toList();
+    }
+    return allHelicopterManufacturer;
+  }
+
+//========================================//
+
+//historicalEvent-Api
+
+  String historicalEventApi =
+      "https://api.api-ninjas.com/v1/historicalevents?text=${Globals.globals.searchHistoricalEventName}";
+  Future<List<HistoricalEvent>> getAllHistoricalEvent() async {
+    List<HistoricalEvent> allHistoricalEvent = [];
+    String historicalEventApi =
+        "https://api.api-ninjas.com/v1/historicalevents?text=${Globals.globals.searchHistoricalEventName}";
+    http.Response response = await http.get(
+      Uri.parse(historicalEventApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchHistoricalEventName);
+
+      List data = jsonDecode(response.body);
+      allHistoricalEvent =
+          data.map((e) => HistoricalEvent.fromJson(e)).toList();
+    }
+    return allHistoricalEvent;
+  }
+
+//========================================//
+
+//historicalMan-Api
+
+  String historicalManApi =
+      "https://api.api-ninjas.com/v1/historicalfigures?name=${Globals.globals.searchHistoricalManName}";
+  Future<List<HistoricalMan>> getAllHistoricalMan() async {
+    List<HistoricalMan> allHistoricalMan = [];
+    String historicalManApi =
+        "https://api.api-ninjas.com/v1/historicalfigures?name=${Globals.globals.searchHistoricalManName}";
+    http.Response response = await http.get(
+      Uri.parse(historicalManApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchHistoricalManName);
+
+      List data = jsonDecode(response.body);
+      allHistoricalMan = data.map((e) => HistoricalMan.fromJson(e)).toList();
+    }
+    return allHistoricalMan;
+  }
+
+//========================================//
+
+//holiday-Api
+
+  String holidayApi =
+      "https://api.api-ninjas.com/v1/holidays?country=${Globals.globals.searchHolidayCountry}&year=${Globals.globals.searchHolidayYear}";
+  Future<List<Holiday>> getAllHoliday() async {
+    List<Holiday> allHoliday = [];
+    String holidayApi =
+        "https://api.api-ninjas.com/v1/holidays?country=${Globals.globals.searchHolidayCountry}&year=${Globals.globals.searchHolidayYear}";
+    http.Response response = await http.get(
+      Uri.parse(holidayApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchHolidayCountry);
+      log(Globals.globals.searchHolidayYear);
+
+      List data = jsonDecode(response.body);
+      allHoliday = data.map((e) => Holiday.fromJson(e)).toList();
+    }
+    return allHoliday;
+  }
+
+//========================================//
+
+//interestrate-Api
+
+  String interestRateApi =
+      "https://api.api-ninjas.com/v1/interestrate?country=${Globals.globals.searchCountryForInterestRate}";
+  Future<List<InterestRate>> getAllCountryWithInterestRate() async {
+    List<InterestRate> allCountryWithInterestRate = [];
+    String interestRateApi =
+        "https://api.api-ninjas.com/v1/interestrate?country=${Globals.globals.searchCountryForInterestRate}";
+    http.Response response = await http.get(
+      Uri.parse(interestRateApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchCountryForInterestRate);
+
+      Map data = jsonDecode(response.body);
+      List rate = data["central_bank_rates"];
+      allCountryWithInterestRate =
+          rate.map((e) => InterestRate.fromJson(e)).toList();
+    }
+    return allCountryWithInterestRate;
   }
 }

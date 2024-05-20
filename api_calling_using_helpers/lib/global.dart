@@ -9,5 +9,13 @@ class Globals {
   String searchCocktailName = "bloody mary";
   String searchDictionaryWord = "will";
   String searchDogName = "golden retriever";
+  String searchEmojiName = "slightly smiling face";
+  String searchExerciseName = "biceps";
+  String searchHelicopterManufacturerName = "bell";
+  String searchHistoricalEventName = "maratha empire";
+  String searchHistoricalManName = "Maharana Pratap";
+  String searchHolidayYear = "2024";
+  String searchHolidayCountry = "IN";
+  String searchCountryForInterestRate = "United Kingdom";
   static Globals globals = Globals();
 }

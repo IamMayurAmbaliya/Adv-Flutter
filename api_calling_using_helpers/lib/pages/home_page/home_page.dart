@@ -321,6 +321,76 @@ class HomePage extends StatelessWidget {
                   "30.DogApi",
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.emojiPage,
+                  );
+                },
+                child: const Text(
+                  "31.EmojiApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.exercisePage,
+                  );
+                },
+                child: const Text(
+                  "32.ExerciseApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.helicopterPage,
+                  );
+                },
+                child: const Text(
+                  "33.HelicopterApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.historicalEventPage,
+                  );
+                },
+                child: const Text(
+                  "34.HistoricalEventApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.historicalEventPage,
+                  );
+                },
+                child: const Text(
+                  "35.HistoricalManApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.holidayPage,
+                  );
+                },
+                child: const Text(
+                  "36.HolidayApi",
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.interestRatePage,
+                  );
+                },
+                child: const Text(
+                  "37.InterestRateApi",
+                ),
+              ),
             ],
           ),
         ),

@@ -18,8 +18,15 @@ import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
 import 'package:api_calling_using_helpers/modal/dog_modal.dart';
+import 'package:api_calling_using_helpers/modal/emoji_modal.dart';
 import 'package:api_calling_using_helpers/modal/event_modal.dart';
+import 'package:api_calling_using_helpers/modal/exercise_modal.dart';
 import 'package:api_calling_using_helpers/modal/game_mode_modal.dart';
+import 'package:api_calling_using_helpers/modal/helicopter_modal.dart';
+import 'package:api_calling_using_helpers/modal/historical_event_modal.dart';
+import 'package:api_calling_using_helpers/modal/historical_man_modal.dart';
+import 'package:api_calling_using_helpers/modal/holiday_modal.dart';
+import 'package:api_calling_using_helpers/modal/interest_rate_modal.dart';
 import 'package:api_calling_using_helpers/modal/levelborder_modal.dart';
 import 'package:api_calling_using_helpers/modal/map_modal.dart';
 import 'package:api_calling_using_helpers/modal/nature_modal.dart';
@@ -76,6 +83,13 @@ class WallPaperController extends ChangeNotifier {
   List<City> allCities = [];
   List<Cocktail> allCocktails = [];
   List<Dog> allDogs = [];
+  List<Emoji> allEmojis = [];
+  List<Exercise> allExercises = [];
+  List<Helicopter> allHelicopterManufacturers = [];
+  List<HistoricalEvent> allHistoricalEvents = [];
+  List<HistoricalMan> allHistoricalMans = [];
+  List<Holiday> allHolidays = [];
+  List<InterestRate> allCountryWithInterestRates = [];
 
   WallPaperController() {
     getData();
@@ -146,6 +160,22 @@ class WallPaperController extends ChangeNotifier {
     allCocktails = await ApiHelper.apiHelper.getAllCocktail();
 
     allDogs = await ApiHelper.apiHelper.getAllDog();
+
+    allEmojis = await ApiHelper.apiHelper.getAllEmoji();
+
+    allExercises = await ApiHelper.apiHelper.getAllExercise();
+
+    allHelicopterManufacturers =
+        await ApiHelper.apiHelper.getAllHelicopterManufacturer();
+
+    allHistoricalEvents = await ApiHelper.apiHelper.getAllHistoricalEvent();
+
+    allHistoricalMans = await ApiHelper.apiHelper.getAllHistoricalMan();
+
+    allHolidays = await ApiHelper.apiHelper.getAllHoliday();
+
+    allCountryWithInterestRates =
+        await ApiHelper.apiHelper.getAllCountryWithInterestRate();
 
     notifyListeners();
   }
