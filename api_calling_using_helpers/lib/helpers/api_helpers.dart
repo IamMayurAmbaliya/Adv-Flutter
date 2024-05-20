@@ -15,6 +15,7 @@ import 'package:api_calling_using_helpers/modal/celebrity_modal.dart';
 import 'package:api_calling_using_helpers/modal/ceremony_modal.dart';
 import 'package:api_calling_using_helpers/modal/city_modal.dart';
 import 'package:api_calling_using_helpers/modal/cocktail_modal.dart';
+import 'package:api_calling_using_helpers/modal/company_logo_modal.dart';
 import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
@@ -889,5 +890,32 @@ class ApiHelper {
           rate.map((e) => InterestRate.fromJson(e)).toList();
     }
     return allCountryWithInterestRate;
+  }
+
+
+
+//========================================//
+
+//companyLogo-Api
+
+  String companyLogoApi =
+      "https://api.api-ninjas.com/v1/logo?name=${Globals.globals.searchHolidayCountry}&year=${Globals.globals.searchCompanyName}";
+  Future<List<CompanyLogo>> getAllCompanyLogo() async {
+    List<CompanyLogo> allCompanyLogo = [];
+    String companyLogoApi =
+        "https://api.api-ninjas.com/v1/logo?name=${Globals.globals.searchHolidayCountry}&year=${Globals.globals.searchCompanyName}";
+    http.Response response = await http.get(
+      Uri.parse(companyLogoApi),
+      headers: {'X-Api-Key': "Q4QZH0WlGoe+gPas1WUoHw==rbnXYDrLdCGCLpKN"},
+    );
+
+    if (response.statusCode == 200) {
+      log(Globals.globals.searchCompanyName);
+
+
+      List data = jsonDecode(response.body);
+      allCompanyLogo = data.map((e) => CompanyLogo.fromJson(e)).toList();
+    }
+    return allCompanyLogo;
   }
 }

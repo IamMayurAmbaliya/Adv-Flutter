@@ -12,6 +12,7 @@ import 'package:api_calling_using_helpers/pages/celebrity_page/celebrity_page.da
 import 'package:api_calling_using_helpers/pages/ceremony_page/ceremony_page.dart';
 import 'package:api_calling_using_helpers/pages/city_page/city_page.dart';
 import 'package:api_calling_using_helpers/pages/cocktail_page/cocktail_page.dart';
+import 'package:api_calling_using_helpers/pages/company_logo_page/company_logo_page.dart';
 import 'package:api_calling_using_helpers/pages/content_page/content_page.dart';
 import 'package:api_calling_using_helpers/pages/country_page/country_page.dart';
 import 'package:api_calling_using_helpers/pages/dictionary_page/dictionary_page.dart';
@@ -85,6 +86,7 @@ class AppRoutes {
   String historicalManPage = "historical_man_page";
   String holidayPage = "holiday_page";
   String interestRatePage = "interest_rate_page";
+  String companyLogoPage = "company_logo_page";
 
   Map<String, WidgetBuilder> routes = {
     "/": (context) => const HomePage(),
@@ -128,5 +130,6 @@ class AppRoutes {
     "historical_man_page": (context) => const HistoricalManPage(),
     "holiday_page": (context) => const HoliDayPage(),
     "interest_rate_page": (context) => const InterestRatePage(),
+    "company_logo_page": (context) => const CompanyLogoPage(),
   };
 }

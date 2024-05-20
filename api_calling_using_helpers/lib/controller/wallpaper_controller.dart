@@ -14,6 +14,7 @@ import 'package:api_calling_using_helpers/modal/celebrity_modal.dart';
 import 'package:api_calling_using_helpers/modal/ceremony_modal.dart';
 import 'package:api_calling_using_helpers/modal/city_modal.dart';
 import 'package:api_calling_using_helpers/modal/cocktail_modal.dart';
+import 'package:api_calling_using_helpers/modal/company_logo_modal.dart';
 import 'package:api_calling_using_helpers/modal/content_modal.dart';
 import 'package:api_calling_using_helpers/modal/country_modal.dart';
 import 'package:api_calling_using_helpers/modal/currencies_modal.dart';
@@ -90,6 +91,7 @@ class WallPaperController extends ChangeNotifier {
   List<HistoricalMan> allHistoricalMans = [];
   List<Holiday> allHolidays = [];
   List<InterestRate> allCountryWithInterestRates = [];
+  List<CompanyLogo> allCompanyLogos = [];
 
   WallPaperController() {
     getData();
@@ -176,6 +178,8 @@ class WallPaperController extends ChangeNotifier {
 
     allCountryWithInterestRates =
         await ApiHelper.apiHelper.getAllCountryWithInterestRate();
+
+    allCompanyLogos = await ApiHelper.apiHelper.getAllCompanyLogo();
 
     notifyListeners();
   }

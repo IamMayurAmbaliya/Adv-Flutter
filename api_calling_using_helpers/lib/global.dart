@@ -17,5 +17,6 @@ class Globals {
   String searchHolidayYear = "2024";
   String searchHolidayCountry = "IN";
   String searchCountryForInterestRate = "United Kingdom";
+  String searchCompanyName = "Microsoft";
   static Globals globals = Globals();
 }

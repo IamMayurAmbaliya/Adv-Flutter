@@ -391,6 +391,16 @@ class HomePage extends StatelessWidget {
                   "37.InterestRateApi",
                 ),
               ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).pushNamed(
+                    AppRoutes.instance.companyLogoPage,
+                  );
+                },
+                child: const Text(
+                  "38.CompanyLogoApi",
+                ),
+              ),
             ],
           ),
         ),
